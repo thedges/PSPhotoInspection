@@ -18,10 +18,19 @@ It provides following key functionality:
 * <b>Configurable Fields</b> - specify a comma-separated list of fields on the target object to show in the edit form. An inspector can then provide values for each of these fields as each picture is taken.
 * <b>Geolocation</b> - automatically capture the lat/lng of inspection location and store values in configurable lat/lng fields on child record
 
-<b>Quick Action Setup</b>
-While you can drop this component on a Lightning Page, it makes most sense to use it as a Quick Action in Salesforce Mobile. Once issue with Quick Actions is that you cannot configure them declaratively like you can when dropping a component on a page. To allow some dynamic configuration, I created a Custom Metadata type called "PSPhotoInspection" to store configutation parameters. The Quick Action logic will lookup the configuration in custom metadata configuration. The configuration has two options 
+# Quick Action Setup
+While you can drop this component on a Lightning Page, it makes most sense to use it as a Quick Action in Salesforce Mobile. Once issue with Quick Actions is that you cannot configure them declaratively like you can when dropping a component on a page. To allow some dynamic configuration, I created a Custom Metadata type called "PSPhotoInspection" to store configutation parameters that the component will read a runtime to configure itself. You have two fields to specify which configuration setting gets applied:
+* Specify a single configuration for a given target object (i.e. same PSPhotoInspection config gets applied to Case records)
+* Specify a configuration at a user profile level for a given target object (i.e. apply a specific PSPhotoInspection config for users in a specific profile accessing the component on a specified object like Case)
 
-<b>Setup Instructions</b>
+Here are the configuration options:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+# Setup Instructions
 Here are steps to use this component:
   * Install the component per the "Deploy to Salesforce" button below
   * Setup users to have access to custom objects that drive the template. Either assign the permset "PSFileAttachTemplate" to your users  ...or... make sure users have read/write access to the PSFileAttachTemplate and PSFileAttachDef objects and PSFileAttachTemplate tab
@@ -29,7 +38,7 @@ Here are steps to use this component:
   * For the template, create a list of file definitions for the files to attach to the record. Set the record fields (filename, required, description, etc...) as defined above
   * Drop the PSFileAttachTemplate Lightning Component on an internal or community page. Configure the Lightning Component and select the appropriate template name you specified earlier.
 
-<b>Package Dependency</b>
+# Package Dependency
 Make sure to install these packages first in the order given:
   * [Lightning-Strike](https://github.com/thedges/Lightning-Strike)
   * [PSCommon](https://github.com/thedges/PSCommon)

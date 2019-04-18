@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="psPhotoInspection">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="message" type="String" label="Click camera icon message" />
+            <property name="imageSize" type="Integer" label="Target image size in KB (ex: 300)" />
+            <property name="childObject" type="String" label="API name of child object" />
+            <property name="childParentField" type="String" label="API name of child field that points to parent" />
+            <property name="childFields" type="String" label="Comma separated list of fields to edit on child object" />
+            <property name="latField" type="String" label="Latitude field on child object" />
+            <property name="lngField" type="String" label="Longitude field on child object" />
+            <property name="saveText" type="String" label="Save button label" />
+            <property name="clearText" type="String" label="Clear button label" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

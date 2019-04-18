@@ -1,0 +1,21 @@
+<aura:component controller="PSPhotoInspectionActionController" implements="force:lightningQuickAction,force:hasRecordId">
+    <aura:attribute name="imageSize" type="Integer" default="300"/>
+    <aura:attribute name="message" type="String" default="Click here to take photo"/>
+    <aura:attribute name="childObject" type="String"/>
+    <aura:attribute name="childParentField" type="String" default="Click here to take photo"/>
+    <aura:attribute name="childFields" type="String" default="Click here to take photo"/>
+    <aura:attribute name="latField" type="String" default="Click here to take photo"/>
+    <aura:attribute name="lngField" type="String" default="Click here to take photo"/>
+    <aura:attribute name="saveText" type="String" default="Click here to take photo"/>
+    <aura:attribute name="clearText" type="String" default="Click here to take photo"/>
+    <aura:attribute name="configReady" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <aura:if isTrue="{!v.configReady}">
+      <c:psPhotoInspection recordId="{!v.recordId}" imageSize="{!v.imageSize}" message="{!v.message}" childObject="{!v.childObject}" 
+                           childParentField="{!v.childParentField}" 
+                           childFields="{!v.childFields}" latField="{!v.latField}" lngField="{!v.lngField}" 
+                           saveText="{!v.saveText}" clearText="{!v.clearText}"/>
+    </aura:if>
+</aura:component>

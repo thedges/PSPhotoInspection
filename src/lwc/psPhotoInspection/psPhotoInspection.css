@@ -1,0 +1,38 @@
+.hide {
+    display: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.paste-msg {
+  position: relative;
+}
+
+.paste-msg p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.paste-msg p img {
+    display : block;
+    margin : auto;
+}
+
+.spinnerX {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+}

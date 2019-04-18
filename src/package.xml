@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>PSPhotoInspectionActionController</members>
+        <members>PSPhotoInspectionController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PSPhotoInspectionAction</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>PSPhotoInspection.Case_Inspection</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>PSSearchFieldDef__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>PSPhotoInspection__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>PSPhotoInspection__mdt-PSPhotoInspection Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>psPhotoInspection</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>PSPhotoInspection</members>
+        <name>StaticResource</name>
+    </types>
+    <version>45.0</version>
+</Package>

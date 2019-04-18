@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-card">
+        <div class="cameraDiv" >
+            <div class="paste-msg" style="height:300px" onclick={cameraClick}>
+                <p>
+                    <img src={cameraIconUrl} width="60" height="60"/>
+                    <br/>
+                    {message}
+                </p>
+            </div>
+            <input class="hide cameraInput" type="file" accept="image/*;capture=camera" onchange={fileChange}/>
+        </div>
+        <div class="hide fileFormDiv slds-p-around_x-small">
+
+            <div class="slds-align_absolute-center" >
+                <img style="border: 1px solid #E0E0E0" class="myimg" src="" onload={onImageLoad}/>
+            </div>
+            <div>
+                <template if:true={filterFields}>
+                    <template for:each={filterFields} for:item="fld" for:index="idx">
+                        <div class="slds-p-top_x-small" key={fld.name}>
+                          <c-ps-dyn-field field-def={fld} onfieldchange={handleFieldChange}></c-ps-dyn-field>
+                        </div>
+                    </template>
+                </template>
+            </div>
+            <div class="row slds-align_absolute-center slds-p-bottom_x-small slds-p-top_x-small">
+                <template if:true={showSpinner}>
+                    <div class="spinnerX">
+                        <lightning-spinner variant="brand" alternative-text="Saving"></lightning-spinner>
+                    </div>
+                </template>
+                <template if:false={showSpinner}>
+                  <lightning-button variant="brand" label={saveText} onclick={saveFile} ></lightning-button>
+                  <lightning-button variant="destructive" label={clearText} onclick={clear} class="slds-p-left_x-small"></lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

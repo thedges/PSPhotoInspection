@@ -51,9 +51,10 @@ Here are steps to setup and configure this component:
     - Create a Lookup or Master-Detail relationship field to the primary object (i.e. parent object) you will execute inspections from. This could be a standard or custom object.
   * On the parent object, create a Quick Action and provide whatever Label, Name and Icon that makes sense to your scenario. Select the "PSPhotoInspectionAction" Lightning Component for the Quick Action configuration.
   * Go to <b>Setup > Custom Code > Custom Metadata Types</b>
-    * Click <b>Manage Records</b> next to "PSPhotoInspection" metadata entry in list
-    * Click <b>New</b> button to create a new metadata configuration. See above for field definitions and example screenshot. Make sure to specify either the "Parent Object" or combination or "Parent Object" and "Profile".
-  * Drop the PSFileAttachTemplate Lightning Component on an internal or community page. Configure the Lightning Component and select the appropriate template name you specified earlier.
+    - Click <b>Manage Records</b> next to "PSPhotoInspection" metadata entry in list
+    - Click <b>New</b> button to create a new metadata configuration. 
+    - See above for field definitions and example screenshot. Make sure to specify either the "Parent Object" or combination or "Parent Object" and "Profile".
+  * That is it...now use the Quick Action in Salesforce Mobile (or you can access from desktop app)
 
 # Package Dependency
 Make sure to install these packages first in the order given:

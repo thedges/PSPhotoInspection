@@ -20,7 +20,7 @@ It provides following key functionality:
 
 # Quick Action Setup
 While you can drop this component on a Lightning Page, it makes most sense to use it as a Quick Action in Salesforce Mobile. One issue with Quick Actions is that you cannot configure them declaratively like you can when dropping a component on a page. To allow some dynamic configuration, I created a Custom Metadata type called "PSPhotoInspection" to store configuration parameters that the component will read a runtime to configure itself. You have two fields to specify which configuration setting gets applied:
-* Specify a single configuration for a given target object (i.e. same PSPhotoInspection config gets applied to Case records)
+* Specify a single configuration for a given target object (i.e. same PSPhotoInspection config gets applied to every Case record)
 * Specify a configuration at a user profile level for a given target object (i.e. apply a specific PSPhotoInspection config for users in a specific profile accessing the component on a specified object like Case)
 
 Here are the configuration options:

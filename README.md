@@ -27,17 +27,17 @@ Here are the configuration options:
 
 | Parameter  | Definition |
 | ------------- | ------------- |
-| Parent Object  | Content Cell  |
-| Profile  | Content Cell  |
-| Image Size  | Content Cell  |
-| Camera Message  | Content Cell  |
-| Child Object  | Content Cell  |
-| Child Parent Object  | Content Cell  |
-| Child Fields | Content Cell  |
-| Latitude Field | Content Cell  |
-| Longitude Field  | Content Cell  |
-| Save Button Text  | Content Cell  |
-| Clear Button Text  | Content Cell  |
+| Parent Object  | The API name of the parent object. This is the object you create the Quick Action on.  |
+| Profile  | [Optional] The name of the user profile to filter the configuration in combination with Parent Object above  |
+| Image Size  | The target size in KB to compress large images to for saving space and upload time  |
+| Camera Message  | The message to show directly below the camera icon  |
+| Child Object  | The API name of the child object to create new records for and attach inspection photos to  |
+| Child Parent Object  | The API field name on child object that establishes relation to parent object  |
+| Child Fields | A comma separated list of fields on child object to show in the inspection form  |
+| Latitude Field | The API field name on child object to store latitude value  |
+| Longitude Field  | The API field name on child object to store longitude value  |
+| Save Button Text  | Text to show for the save button  |
+| Clear Button Text  | Text to show for the clear button  |
 
 # Setup Instructions
 Here are steps to use this component:

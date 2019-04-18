@@ -1,1 +1,62 @@
 # PSPhotoInspection
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
+
+This package contains a Lightning component for performing photo-based inspections. Currently you need to setup as a Quick Action on a record and use from standard Salesforce Mobile app. It was developed as a Lightning Web Component so hopefully can utilize in Field Service Lightning at some point in future when they allow LWC extensions. 
+
+![alt text](https://github.com/thedges/PSPhotoInspection/blob/master/PSPhotoInspection.gif "PSPhotoInspection")
+
+This component works in following way:
+* Inspector/user/agent would use quick action in SF mobile to launch component
+* Take a picture of the issue
+* Enter values in to configurable fields to associate to that photo
+* Component creates a new child record for this specific inspection record, stores user entered data to fields on child record and stores geolocation
+* Attaches the photo image to the new child record
+
+It provides following key functionality:
+* <b>Configurable Child Object</b> - specify the API name of child object to create new records for each photo inspection and attach photo to that record
+* <b>Photo compression</b> - specify a target file size in KB for compressing large images to save on space and upload time
+* <b>Configurable Fields</b> - specify a comma-separated list of fields on the target object to show in the edit form. An inspector can then provide values for each of these fields as each picture is taken.
+* <b>Geolocation</b> - automatically capture the lat/lng of inspection location and store values in configurable lat/lng fields on child record
+
+# Quick Action Setup
+While you can drop this component on a Lightning Page, it makes most sense to use it as a Quick Action in Salesforce Mobile. Once issue with Quick Actions is that you cannot configure them declaratively like you can when dropping a component on a page. To allow some dynamic configuration, I created a Custom Metadata type called "PSPhotoInspection" to store configutation parameters that the component will read a runtime to configure itself. You have two fields to specify which configuration setting gets applied:
+* Specify a single configuration for a given target object (i.e. same PSPhotoInspection config gets applied to Case records)
+* Specify a configuration at a user profile level for a given target object (i.e. apply a specific PSPhotoInspection config for users in a specific profile accessing the component on a specified object like Case)
+
+Here are the configuration options:
+
+| Parameter  | Definition |
+| ------------- | ------------- |
+| Parent Object  | The API name of the parent object. This is the object you create the Quick Action on.  |
+| Profile  | [Optional] The name of the user profile to filter the configuration in combination with Parent Object above  |
+| Image Size  | The target size in KB to compress large images to for saving space and upload time  |
+| Camera Message  | The message to show directly below the camera icon  |
+| Child Object  | The API name of the child object to create new records for and attach inspection photos to  |
+| Child Parent Object  | The API field name on child object that establishes relation to parent object  |
+| Child Fields | A comma separated list of fields on child object to show in the inspection form  |
+| Latitude Field | The API field name on child object to store latitude value  |
+| Longitude Field  | The API field name on child object to store longitude value  |
+| Save Button Text  | Text to show for the save button  |
+| Clear Button Text  | Text to show for the clear button  |
+
+Here is example of a configuration done for a demo:
+
+![alt text](https://github.com/thedges/PSPhotoInspection/blob/master/PSPhotoInspection-Config.png "PSPhotoInspection Config")
+
+# Setup Instructions
+Here are steps to use this component:
+  * Install the component per the "Deploy to Salesforce" button below
+  * Setup users to have access to custom objects that drive the template. Either assign the permset "PSFileAttachTemplate" to your users  ...or... make sure users have read/write access to the PSFileAttachTemplate and PSFileAttachDef objects and PSFileAttachTemplate tab
+  * Navigate to the PSFileAttachTemplate tab and create a new template. Give it a logical name as you will use this when configuring the Lightning Component later
+  * For the template, create a list of file definitions for the files to attach to the record. Set the record fields (filename, required, description, etc...) as defined above
+  * Drop the PSFileAttachTemplate Lightning Component on an internal or community page. Configure the Lightning Component and select the appropriate template name you specified earlier.
+
+# Package Dependency
+Make sure to install these packages first in the order given:
+  * [Lightning-Strike](https://github.com/thedges/Lightning-Strike)
+  * [PSCommon](https://github.com/thedges/PSCommon)
+  
+<a href="https://githubsfdeploy.herokuapp.com">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>

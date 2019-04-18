@@ -55,7 +55,9 @@ Here are steps to use this component:
 Make sure to install these packages first in the order given:
   * [Lightning-Strike](https://github.com/thedges/Lightning-Strike)
   * [PSCommon](https://github.com/thedges/PSCommon)
-  
+
+Click this to install this package:
+
 <a href="https://githubsfdeploy.herokuapp.com">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">

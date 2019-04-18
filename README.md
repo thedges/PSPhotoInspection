@@ -25,10 +25,19 @@ While you can drop this component on a Lightning Page, it makes most sense to us
 
 Here are the configuration options:
 
-| First Header  | Second Header |
+| Parameter  | Definition |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Parent Object  | Content Cell  |
+| Profile  | Content Cell  |
+| Image Size  | Content Cell  |
+| Camera Message  | Content Cell  |
+| Child Object  | Content Cell  |
+| Child Parent Object  | Content Cell  |
+| Child Fields | Content Cell  |
+| Latitude Field | Content Cell  |
+| Longitude Field  | Content Cell  |
+| Save Button Text  | Content Cell  |
+| Clear Button Text  | Content Cell  |
 
 # Setup Instructions
 Here are steps to use this component:

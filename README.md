@@ -39,6 +39,10 @@ Here are the configuration options:
 | Save Button Text  | Text to show for the save button  |
 | Clear Button Text  | Text to show for the clear button  |
 
+Here is example of a configuration done for a demo:
+
+![alt text](https://github.com/thedges/PSPhotoInspection/blob/master/PSPhotoInspection-Config.png "PSPhotoInspection Config")
+
 # Setup Instructions
 Here are steps to use this component:
   * Install the component per the "Deploy to Salesforce" button below

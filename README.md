@@ -46,7 +46,9 @@ Here is example of a configuration done for a demo:
 # Setup Instructions
 Here are steps to setup and configure this component:
   * Install the component per the "Deploy to Salesforce" button below. Make sure to install dependent packages first as noted below.
-  * Create a custom object in your demo org where you will store your inspection results. Create fields to store values the inspector will enter for each photo inspection. Create a Lookup or Master-Detail relationship field to the primary object (i.e. parent object) you will execute inspections from. This could be a standard or custom object.
+  * Create a custom object in your demo org where you will store your inspection results. 
+    - Create fields to store values the inspector will enter for each photo inspection. 
+    - Create a Lookup or Master-Detail relationship field to the primary object (i.e. parent object) you will execute inspections from. This could be a standard or custom object.
   * On the parent object, create a Quick Action and provide whatever Label, Name and Icon that makes sense to your scenario. Select the "PSPhotoInspectionAction" Lightning Component for the Quick Action configuration.
   * Go to <b>Setup > Custom Code > Custom Metadata Types</b>
     * Click <b>Manage Records</b> next to "PSPhotoInspection" metadata entry in list

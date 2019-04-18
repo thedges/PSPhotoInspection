@@ -44,11 +44,13 @@ Here is example of a configuration done for a demo:
 ![alt text](https://github.com/thedges/PSPhotoInspection/blob/master/PSPhotoInspection-Config.png "PSPhotoInspection Config")
 
 # Setup Instructions
-Here are steps to use this component:
-  * Install the component per the "Deploy to Salesforce" button below
-  * Setup users to have access to custom objects that drive the template. Either assign the permset "PSFileAttachTemplate" to your users  ...or... make sure users have read/write access to the PSFileAttachTemplate and PSFileAttachDef objects and PSFileAttachTemplate tab
-  * Navigate to the PSFileAttachTemplate tab and create a new template. Give it a logical name as you will use this when configuring the Lightning Component later
-  * For the template, create a list of file definitions for the files to attach to the record. Set the record fields (filename, required, description, etc...) as defined above
+Here are steps to setup and configure this component:
+  * Install the component per the "Deploy to Salesforce" button below. Make sure to install dependent packages first as noted below.
+  * Create a custom object in your demo org where you will store your inspection results. Create fields to store values the inspector will enter for each photo inspection. Create a Lookup or Master-Detail relationship field to the primary object (i.e. parent object) you will execute inspections from. This could be a standard or custom object.
+  * On the parent object, create a Quick Action and provide whatever Label, Name and Icon that makes sense to your scenario. Select the "PSPhotoInspectionAction" Lightning Component for the Quick Action configuration.
+  * Go to <b>Setup > Custom Code > Custom Metadata Types</b>
+    * Click <b>Manage Records</b> next to "PSPhotoInspection" metadata entry in list
+    * Click <b>New</b> button to create a new metadata configuration. See above for field definitions and example screenshot. Make sure to specify either the "Parent Object" or combination or "Parent Object" and "Profile".
   * Drop the PSFileAttachTemplate Lightning Component on an internal or community page. Configure the Lightning Component and select the appropriate template name you specified earlier.
 
 # Package Dependency
@@ -56,7 +58,7 @@ Make sure to install these packages first in the order given:
   * [Lightning-Strike](https://github.com/thedges/Lightning-Strike)
   * [PSCommon](https://github.com/thedges/PSCommon)
 
-Click this to install this package:
+Then click this to install this package:
 
 <a href="https://githubsfdeploy.herokuapp.com">
   <img alt="Deploy to Salesforce"

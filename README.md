@@ -34,10 +34,12 @@ Here are the configuration options:
 | Child Object  | The API name of the child object to create new records for and attach inspection photos to  |
 | Child Parent Object  | The API field name on child object that establishes relation to parent object  |
 | Child Fields | A comma separated list of fields on child object to show in the inspection form  |
-| Latitude Field | The API field name on child object to store latitude value. Use a Geolocation field type with decimal 6 places.  |
+| Latitude Field | The API field name on child object to store latitude value. |
 | Longitude Field  | The API field name on child object to store longitude value  |
 | Save Button Text  | Text to show for the save button  |
 | Clear Button Text  | Text to show for the clear button  |
+
+NOTE: This component expects the Latitude and Longitude fields to be provided by standard Geolocation field. Depending on your field name, the API names would be <name>__Latitude__s and <name>__Longitude__s.
 
 Here is example of a configuration done for a demo:
 

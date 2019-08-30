@@ -39,7 +39,7 @@ Here are the configuration options:
 | Save Button Text  | Text to show for the save button  |
 | Clear Button Text  | Text to show for the clear button  |
 
-NOTE: This component expects the Latitude and Longitude fields to be provided by standard Geolocation field. Depending on your field name, the API names would be <name>__Latitude__s and <name>__Longitude__s.
+NOTE: This component expects the Latitude and Longitude fields to be provided by standard Geolocation field. Depending on your field name, the API names would be ```<name>__Latitude__s``` and ```<name>__Longitude__s```.
 
 Here is example of a configuration done for a demo:
 

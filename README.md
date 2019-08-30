@@ -34,7 +34,7 @@ Here are the configuration options:
 | Child Object  | The API name of the child object to create new records for and attach inspection photos to  |
 | Child Parent Object  | The API field name on child object that establishes relation to parent object  |
 | Child Fields | A comma separated list of fields on child object to show in the inspection form  |
-| Latitude Field | The API field name on child object to store latitude value  |
+| Latitude Field | The API field name on child object to store latitude value. Use a Geolocation field type with decimal 6 places.  |
 | Longitude Field  | The API field name on child object to store longitude value  |
 | Save Button Text  | Text to show for the save button  |
 | Clear Button Text  | Text to show for the clear button  |

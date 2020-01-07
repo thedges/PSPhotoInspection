@@ -14,7 +14,7 @@ This component works in following way:
 
 It provides following key functionality:
 * <b>Configurable Child Object</b> - specify the API name of child object to create new records for each photo inspection and attach photo to that record
-* <b>Photo compression</b> - specify a target file size in KB for compressing large images to save on space and upload time. It utilizes [this](https://github.com/WangYuLue/image-conversion) Javascript library for image compression.
+* <b>Photo compression</b> - specify a target file size in KB for compressing large images to save on space and upload time. It utilizes [this](https://github.com/WangYuLue/image-conversion) Javascript library and the compressAccurately(file, config) method for image compression.
 * <b>Configurable Fields</b> - specify a comma-separated list of fields on the target object to show in the edit form. An inspector can then provide values for each of these fields as each picture is taken.
 * <b>Geolocation</b> - automatically capture the lat/lng of inspection location and store values in configurable lat/lng fields on child record
 
